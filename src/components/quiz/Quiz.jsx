@@ -14,7 +14,7 @@ const QuizAttemptScreen = () => {
     correctAnswers: 0,
     wrongAnswers: 0,
   })
-  const [timeLeft, setTimeLeft] = useState(10);
+  const [timeLeft, setTimeLeft] = useState(60);
 
   const { questions } = quizQue
   const { question, choices, correctAnswer } = questions[activeQuestion] || {};
@@ -43,7 +43,7 @@ const QuizAttemptScreen = () => {
       setActiveQuestion(0)
       setShowResult(true)
     }
-    setTimeLeft(10);
+    setTimeLeft(60);
   }
 
   useEffect(() => {
